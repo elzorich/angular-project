@@ -4,16 +4,16 @@ import {Tour} from '../models/tours';
 export const tours: Tour[] = [
   {
     img: 'https://picsum.photos/500/300/?image=77',
-    address: 'Address-77',
+    address: 'Piazza Colonna',
     phone: 7788991122,
     weather: {
-      title: 'title-77',
+      title: 'Roma RM, Italy',
       icon: 'cloud',
       water: 23,
       temperature: 30
     },
     social_info: {
-      title: 'title-12',
+      title: 'Grand Hotel Plaza Roma',
       img: 'https://picsum.photos/100/100/?image=54',
       followers: 23343,
       following: 30
@@ -75,7 +75,7 @@ export const tours: Tour[] = [
       type: 'Amsterdam'
     },
     {
-      img: 'https://picsum.photos/500/300/?image=95',
+      img: 'https://picsum.photos/500/300/?image=242',
       address: 'address-23',
       phone: 17938204892,
       weather: {
@@ -93,7 +93,7 @@ export const tours: Tour[] = [
       type: 'Palma'
     },
     {
-      img: 'https://picsum.photos/500/300/?image=345',
+      img: 'https://picsum.photos/500/300/?image=125',
       address: 'Address-435',
       phone: 464574574754,
       weather: {

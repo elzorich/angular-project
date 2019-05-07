@@ -1,7 +1,7 @@
 
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Tour } from '../models/tours';
-import { tours$ } from '../mock/data';
+import { tours, tours$ } from '../mock/data';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -19,13 +19,20 @@ export class MainListComponent implements OnInit {
 
   public tours$: Observable<Tour[]> = tours$;
   public selectTour: string;
+  public defaultTour = tours[0];
   public background = 'assets/images/1.jpg';
 
 
   constructor() { }
 
   ngOnInit() {
+    console.log(this.defaultTour);
+    this.defaultTourValues();
     this.clickMenu(this.selectTour);
+  }
+
+  public defaultTourValues() {
+    this.tourEmitter.emit(this.defaultTour);
   }
 
 
@@ -40,7 +47,6 @@ export class MainListComponent implements OnInit {
   }
 
   onClickTour(info: Tour) {
-    console.log(info);
     this.background = info.img;
     this.tourEmitter.emit(info);
   }

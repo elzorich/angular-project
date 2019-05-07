@@ -15,7 +15,6 @@ export class AppComponent {
 
   onClickInfo(tour: Tour) {
     this.selectedTour = tour;
-    console.log(this.selectedTour);
   }
 
 }
