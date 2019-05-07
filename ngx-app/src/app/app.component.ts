@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, AfterViewInit, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { Tour } from './models/tours';
 import { tours$ } from './mock/data';
 
