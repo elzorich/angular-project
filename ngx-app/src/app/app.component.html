@@ -1,12 +1,16 @@
+<ng-template #loading>
+	...loading
+</ng-template>
+<h1>Hot Weather Widget</h1>
+<div class="element" *ngIf="(tours$ | async) as tours; else loading">
 
-	<h1>Hot Weather Widget</h1>
-<div class="element">
-<app-main-list></app-main-list>
-		<div class="element-right">
-<app-temperatur></app-temperatur>
-<app-teddy-bear></app-teddy-bear>
-		</div>
-	  <div class="clear"> </div>
+	<app-main-list [tours]="tours" (tourEmitter)="onClickInfo($event)">
+	</app-main-list>
+	
+	<div class="element-right">
+		<app-temperatur [tour]="selectedTour"></app-temperatur>
+		<app-teddy-bear [tour]="selectedTour"></app-teddy-bear>
+	</div>
+	
+	<div class="clear"> </div>
 </div>
-
-

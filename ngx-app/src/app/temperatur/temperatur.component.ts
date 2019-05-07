@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Tour } from '../models/tours';
+import { tours } from '../mock/data';
 
 @Component({
   selector: 'app-temperatur',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemperaturComponent implements OnInit {
 
+  @Input()
+  tour: Tour;
+
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

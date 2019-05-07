@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Tour } from '../models/tours';
 
 @Component({
   selector: 'app-teddy-bear',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./teddy-bear.component.styl']
 })
 export class TeddyBearComponent implements OnInit {
+
+  @Input()
+  tour: Tour;
 
   constructor() { }
 
