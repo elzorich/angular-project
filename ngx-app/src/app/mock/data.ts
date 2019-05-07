@@ -51,8 +51,8 @@ export const tours: Tour[] = [
       social_info: {
         title: 'title-51',
         img: 'https://picsum.photos/100/100/?image=23',
-        followers: 1,
-        following: 1
+        followers: 14353,
+        following: 1436
       },
       type: 'Amsterdam'
     },
@@ -69,8 +69,8 @@ export const tours: Tour[] = [
       social_info: {
         title: 'title-4',
         img: 'https://picsum.photos/100/100/?image=163',
-        followers: 1,
-        following: 1
+        followers: 2194,
+        following: 234
       },
       type: 'Amsterdam'
     },

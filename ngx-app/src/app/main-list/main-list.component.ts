@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
 export class MainListComponent implements OnInit {
 
   @Input()
-  public tours: Tour;
+  public tours: Tour[];
 
   @Output()
   public tourEmitter = new EventEmitter<Tour>();
