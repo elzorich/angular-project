@@ -1,7 +1,7 @@
 export interface Tour {
     img: string;
     address: string;
-    phone: number;   // дополнительно задание pipe для форматирования
+    phone: number;
     weather: {
        title: string,
        icon: string,

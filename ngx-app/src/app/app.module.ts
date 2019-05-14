@@ -10,6 +10,7 @@ import { TeddyBearComponent } from './teddy-bear/teddy-bear.component';
 import { ToursFilterPipe } from './common/pipes/tours-filter.pipe';
 import { InfoFilterPipe } from './common/pipes/info-filter.pipe';
 import { TourItemComponent } from './main-list/tour-item/tour-item.component';
+import { DefaultInfoDirective } from './common/directives/default-info.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TourItemComponent } from './main-list/tour-item/tour-item.component';
     TeddyBearComponent,
     ToursFilterPipe,
     InfoFilterPipe,
-    TourItemComponent
+    TourItemComponent,
+    DefaultInfoDirective
 
   ],
   imports: [
