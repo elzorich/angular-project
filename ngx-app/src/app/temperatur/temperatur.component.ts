@@ -1,21 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Tour } from '../models/tours';
-import { tours } from '../mock/data';
+import { Tour } from '../common/models/tours';
 
 @Component({
   selector: 'app-temperatur',
   templateUrl: './temperatur.component.html',
   styleUrls: ['./temperatur.component.styl']
 })
-export class TemperaturComponent implements OnInit {
+export class TemperaturComponent {
 
   @Input()
   tour: Tour;
-
-  constructor() { }
-
-  ngOnInit() {
-
-  }
 
 }

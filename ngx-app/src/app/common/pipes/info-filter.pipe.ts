@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Tour } from './models/tours';
+import { Tour } from '../models/tours';
 
 @Pipe({
   name: 'infoFilter'

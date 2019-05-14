@@ -1,7 +1,8 @@
+import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import {Tour} from '../models/tours';
 
-export const tours: Tour[] = [
+const tours: Tour[] = [
   {
     img: 'https://picsum.photos/500/300/?image=77',
     address: 'Piazza Colonna',
@@ -148,5 +149,13 @@ export const tours: Tour[] = [
     }
   ];
 
-export const tours$: Observable<Tour[]> = of(tours);
 
+export class ToursService {
+
+  constructor() { }
+
+  public getTours(): Observable<Tour[]> {
+    return of(tours);
+  }
+
+}

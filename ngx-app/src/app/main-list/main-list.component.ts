@@ -1,7 +1,7 @@
 
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Tour } from '../models/tours';
-import { tours, tours$ } from '../mock/data';
+import { Tour } from '../common/models/tours';
+import { ToursService } from '../common/services/tours.service';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
   templateUrl: './main-list.component.html',
   styleUrls: ['./main-list.component.styl']
 })
+
 export class MainListComponent implements OnInit {
 
   @Input()
@@ -17,36 +18,33 @@ export class MainListComponent implements OnInit {
   @Output()
   public tourEmitter = new EventEmitter<Tour>();
 
-  public tours$: Observable<Tour[]> = tours$;
+  public tours$: Observable<Tour[]>;
   public selectTour: string;
-  public defaultTour = tours[0];
+  // public defaultTour = tours[0];
   public background = 'assets/images/1.jpg';
 
 
-  constructor() { }
+  public constructor(
+    private toursService: ToursService  ) {}
 
-  ngOnInit() {
-    console.log(this.defaultTour);
-    this.defaultTourValues();
-    this.clickMenu(this.selectTour);
+  public ngOnInit(): void {
+    this.tours$ = this.toursService.getTours();
+    // this.defaultTourValues();
   }
 
   public defaultTourValues() {
-    this.tourEmitter.emit(this.defaultTour);
+    this.tourEmitter.emit();
   }
 
 
-  public clickMenu(tour: string) {
+  public clickMenu(tour: string): void {
     this.selectTour = tour;
-
     const filteredTours = this.tours.filter(x => x.type === this.selectTour);
-
     this.background = filteredTours[0].img;
-    console.log(filteredTours[0]);
     this.tourEmitter.emit(filteredTours[0]);
   }
 
-  onClickTour(info: Tour) {
+  public onClickTour(info: Tour): void {
     this.background = info.img;
     this.tourEmitter.emit(info);
   }
