@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
     this.tours$ = this.toursService.getTours();
   }
 
-  onClickInfo(tour: Tour) {
+  public onClickInfo(tour: Tour) {
     this.selectedTour = tour;
   }
 
